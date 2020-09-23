@@ -9,12 +9,27 @@ router.get('/', (req, res) => {
 
 // get author
 router.get('/new', (req, res) => {
-    res.render('authors/new', { author: new Author() })
+    res.render('authors/new', {
+        author: new Author()
+    })
 })
 
 // create new author
 router.post('/', (req, res) => {
-    res.send(req.body.name)
+    const author = new Author({
+        name: req.body.name
+    })
+    author.save((err, newAuthor) => {
+        if (err) {
+            res.render('authors/new', {
+                author: author,
+                errorMessage: 'Error Creating Author'
+            })
+        } else {
+            res.redirect(`authors/$(newAuthor)`)
+            res.redirect(`authors`)
+        }
+    })
 })
 
 module.exports = router
