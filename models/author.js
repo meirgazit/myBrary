@@ -1,11 +1,10 @@
 const mongoose = require('mongoose')
 
 const authorSchema = mongoose.Schema({
-    name: {
-        type: String,
-        creationTimestamp: { type: Date, default: Date.now},
-        required: true
-    }
+    
+    name: { type: String, required: true }
 })
 
+//creationTimestamp: { type: Date, default: Date.now},
+    
 module.exports = mongoose.model('Author', authorSchema)
