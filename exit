@@ -1,0 +1,52 @@
+[33mcommit 54107995fdb420a4ba82e3e387d631ac2a1c44f8[m[33m ([m[1;36mHEAD -> [m[1;32mmaster[m[33m)[m
+Author: meirgazit <meirgazit#gmail.com>
+Date:   Thu Sep 24 08:59:57 2020 +0300
+
+    update author.js
+
+[33mcommit 3237e8ba1a4364150d50ce746271b3512f0b14c4[m
+Author: meirgazit <meirgazit#gmail.com>
+Date:   Thu Sep 24 08:53:08 2020 +0300
+
+    morning - start working, add this files: modified:   routes/authors.js
+    modified:   views/authors/index.ejs
+    modified:   views/authors/new.ejs
+    modified:   views/layouts/layout.ejs
+    deleted:    views/partials/erroMessage.ejs
+    new file:   views/partials/errorMessage.ejs
+
+[33mcommit 674e2648d5152d5852818806d483df04082e2488[m
+Author: meirgazit <meirgazit#gmail.com>
+Date:   Wed Sep 23 16:46:04 2020 +0300
+
+    views/partials/erroMessage.ejs routes/authors.js
+
+[33mcommit ccd3a7cb06d019c8bee615ae5b455147f062753d[m
+Author: meirgazit <meirgazit#gmail.com>
+Date:   Wed Sep 23 16:32:15 2020 +0300
+
+    add routes/authors.js & server.js
+
+[33mcommit 4b89b6f3e696e66db8279a5f963e9e10141186ca[m
+Author: meirgazit <meirgazit#gmail.com>
+Date:   Wed Sep 23 15:43:51 2020 +0300
+
+    add routes/authors.js, views/authors/_form_fields.ejs, views/authors/new.ejs
+
+[33mcommit f2a4b570cd201abcf4ec8622fd63d7498d553ff6[m
+Author: meirgazit <meirgazit#gmail.com>
+Date:   Wed Sep 23 14:19:03 2020 +0300
+
+    add nav-bar & author
+
+[33mcommit 1e66c5a8a1ea5c9389cfaa668a437a76af1a2a19[m[33m ([m[1;31mheroku/master[m[33m)[m
+Author: meirgazit <meirgazit#gmail.com>
+Date:   Tue Sep 22 20:19:03 2020 +0300
+
+    fix index.js
+
+[33mcommit 6f27e4bad8657e5178e91dd78e1a6ce6ceae7da1[m[33m ([m[1;31morigin/master[m[33m)[m
+Author: meirgazit <meirgazit#gmail.com>
+Date:   Tue Sep 22 16:42:44 2020 +0300
+
+    initial commit

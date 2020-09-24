@@ -4,13 +4,21 @@ const Author = require('../models/author')
 
 // get all authors
 router.get('/', async (req, res) => {
-    try{
-        const authors = await Author.find({})
-        res.render('authors/index', { authors: authors })
-    } catch {
+    let searchOptions = {}
+    if (req.query.name != null && req.query.name !== '') {
+        searchOptions.name =  new RegExp(req.query.name, 'i')
+    }
+    try {
+        const authors = await Author.find(searchOptions)
+        res.render('authors/index', {
+            authors: authors,
+            searchOptions: req.query
+        })
+    } catch (err) {
+        console.log(err)
         res.redirect('/')
     }
- })
+})
 
 // get author
 router.get('/new', (req, res) => {
@@ -29,6 +37,7 @@ router.post('/', async (req, res) => {
         //res.redirect(`authors/$(newAuthor.id )`)
         res.redirect(`authors`)
     } catch (err) {
+        console.log(err)
         res.render('authors/new', {
             author: author,
             errorMessage: 'Error Creating Author'

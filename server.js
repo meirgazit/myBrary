@@ -15,7 +15,7 @@ app.set('views', __dirname + '/views')
 app.set('layout', 'layouts/layout')
 app.use(expressLayouts)
 app.use(express.static('public'))
-app.use(bodyParser.urlencoded({ limit: '10mg', extended: false }))
+app.use(bodyParser.urlencoded({ limit: '50mg', extended: false }))
 
 mongoose.connect(process.env.DATABASE_URL, { useNewUrlParser: true, useUnifiedTopology: true })
 const db = mongoose.connection
